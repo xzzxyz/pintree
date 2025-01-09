@@ -36,12 +36,13 @@ export function BookmarkCard({
 
   return (
     <div 
+      style={{transition:'0.15s'}}
       onClick={() => window.open(url, '_blank')}
       className={`
         cursor-pointer flex items-center transition-shadow p-4 
         bg-card/50 dark:bg-gray-900 border border-[#eaebf3]
-        dark:ring-gray-800 rounded-2xl hover:-translate-y-1
-        hover:scale-105 hover:shadow-suspension 
+        dark:ring-gray-800 rounded-2xl hover:-translate-y-0.75
+        hover:scale-102.5 hover:shadow-suspension 
         dark:hover:bg-gray-800
         ${isFeatured ? 'border-2 border-blue-500' : ''}
       `}
