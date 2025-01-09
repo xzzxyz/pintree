@@ -67,7 +67,7 @@ export function Header({
       </div>
       
       <div className="flex items-center gap-2">
-        {session && (
+        {/* {session && (
           <>
             <Button 
               variant="outline" 
@@ -78,7 +78,7 @@ export function Header({
               New Bookmark
             </Button>
           </>
-        )}
+        )} */}
         <Button asChild variant="outline" size="sm">
           <Link href="/admin/collections" aria-label="Admin">
             <Settings className="h-4 w-4" />

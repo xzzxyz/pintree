@@ -365,15 +365,16 @@ export function WebsiteSidebar({
                   className="pl-0 flex items-center gap-2 justify-start rounded-none pr-0 w-full h-[60px]"
                 >
                   {isLoading ? (
-                    <Skeleton className="w-[260px] h-[60px]" />
+                    <Skeleton className="w-[60px] h-[60px]" />
                   ) : (
                     <Image
                       src={images[0]?.url || "/logo.png"}
                       alt="Logo"
-                      width={260}
+                      width={60}
                       height={60}
                       style={{
                         objectFit: "contain",
+                        margin: "0 auto",
                       }}
                     />
                   )}
