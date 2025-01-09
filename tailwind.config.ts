@@ -11,6 +11,9 @@ const config: Config = {
   theme: {
   	extend: {
   		colors: {
+			boxShadow:{
+				suspension:'rgba(0, 0, 0, 0.45) 0 25px 20px -20px'
+			},
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
