@@ -33,15 +33,15 @@ export function BookmarkCard({
   
   // 清理 URL 显示，移除 http(s) 和尾部斜杠
   const cleanUrl = url.replace(/^https?:\/\//, '').replace(/\/$/, '')
-  
+
   return (
     <div 
       onClick={() => window.open(url, '_blank')}
       className={`
         cursor-pointer flex items-center transition-shadow p-4 
         bg-card/50 dark:bg-gray-900 border border-[#eaebf3]
-        dark:ring-gray-800 rounded-2xl hover:-translate-y-1 
-        hover:scale-105  hover:shadow-suspension
+        dark:ring-gray-800 rounded-2xl hover:-translate-y-0.5 
+        hover:scale-110 hover:shadow-suspension 
         dark:hover:bg-gray-800
         ${isFeatured ? 'border-2 border-blue-500' : ''}
       `}
