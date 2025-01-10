@@ -110,7 +110,7 @@
   } */
 }
 
-#loading-box > .spinner-box {
+#loading-box>.spinner-box {
   position: fixed;
   z-index: 999999;
   display: flex;
@@ -136,7 +136,7 @@
     content: "...";
     position: absolute;
     overflow: hidden;
-    animation: chang 1s step-end infinite;
+    animation: chang 1.5s steps(3, end) infinite;
   }
 }
 
@@ -217,6 +217,10 @@
 
   50% {
     width: 1rem;
+  }
+
+  75% {
+    width: 2rem;
   }
 
   100% {
