@@ -134,6 +134,8 @@
   font-size: 1.25rem;
   white-space: nowrap;
   font-family: monospace;
+  overflow: hidden;
+  animation: chang 1s linear infinite;
 }
 
 .loader {
@@ -203,5 +205,19 @@
 
   100% {
     transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+}
+
+@keyframes chang {
+  0% {
+    width: 4rem;
+  }
+
+  50% {
+    width: 5rem;
+  }
+
+  100% {
+    width: 6rem;
   }
 }
