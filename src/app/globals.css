@@ -106,12 +106,12 @@
 
 
 
-* {
+/* * {
   margin: 0;
   padding: 0;
-}
+} */
 
-#loading-box .loading-left-bg,
+/* #loading-box .loading-left-bg,
 #loading-box .loading-right-bg {
   position: fixed;
   z-index: 999998;
@@ -125,7 +125,7 @@
 
 #loading-box .loading-right-bg {
   right: 0;
-}
+} */
 
 #loading-box>.spinner-box {
   position: fixed;
@@ -137,13 +137,13 @@
   height: 100vh;
 }
 
-#loading-box .spinner-box .loading-word {
+/* #loading-box .spinner-box .loading-word {
   position: absolute;
   color: #ffffff;
   font-size: 0.95rem;
   transform: translateY(64px);
   text-align: center;
-}
+} */
 
 .loading-title {
   font-size: 1.25rem;
@@ -156,7 +156,7 @@
   background-color: #37474f;
 }
 
-/* 加载完成 */
+/* 加载完成
 .loaded .loading-left-bg {
   transform: translate(-100%, 0);
 }
@@ -167,7 +167,7 @@
 
 .loaded .spinner-box {
   display: none !important;
-}
+} */
 
 .loader {
   position: absolute;
