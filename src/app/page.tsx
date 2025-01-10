@@ -120,10 +120,10 @@ function SearchParamsComponent() {
                 <div class="inner two"></div>
                 <div class="inner three"></div>
               </div>
-              <div class="loading-word">
+              {/* <div class="loading-word">
                 <p class="loading-title" id="loading-title"><%- title %></p>
                 <span id="loading-text">加载中</span>
-              </div>
+              </div> */}
             </div>
           </div>
           ) : 
