@@ -116,7 +116,7 @@ function SearchParamsComponent() {
     <div className="loading-left-bg"></div>
     <div className="loading-right-bg"></div>
     <div className="spinner-box">
-      <div className="loader">
+      {/* <div className="loader">
         <div className="inner one"></div>
         <div className="inner two"></div>
         <div className="inner three"></div>
@@ -124,7 +124,7 @@ function SearchParamsComponent() {
       <div className="loading-word">
         <p className="loading-title" id="loading-title"><%- title %></p>
         <span id="loading-text">加载中</span>
-      </div>
+      </div> */}
     </div>
   </div>
                 </div>
