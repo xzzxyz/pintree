@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback, Suspense } from "react";
-import {  useSearchParams, useRouter, usePathname } from "next/navigation";
+import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { WebsiteSidebar } from "@/components/website/sidebar";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { BookmarkGrid } from "@/components/bookmark/BookmarkGrid";
@@ -107,47 +107,48 @@ function SearchParamsComponent() {
       <div className="flex flex-1">
         <SidebarProvider>
           {
-          isLoading && !collections.length ? (
-            <div className="flex flex-1 items-center justify-center">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
-            </div>
-          ) : 
-          selectedCollectionId || collectionSlug ? (
-            <>
-              <WebsiteSidebar
-                selectedCollectionId={selectedCollectionId}
-                currentFolderId={currentFolderId}
-                onCollectionChange={handleCollectionChange}
-                onFolderSelect={handleFolderSelect}
-              />
-              <div className="flex flex-1 flex-col space-y-8">
-                <Header
-                  selectedCollectionId={selectedCollectionId}
-                  currentFolderId={currentFolderId}
-                  onBookmarkAdded={refreshData}
-                />
-                <div className="flex-1 overflow-y-auto">
-                  <BookmarkGrid
-                    key={`${selectedCollectionId}-${currentFolderId}`}
-                    collectionId={selectedCollectionId}
-                    currentFolderId={currentFolderId}
-                    collectionName={collectionName}
-                    collectionSlug={
-                      collections.find((c) => c.id === selectedCollectionId)
-                        ?.slug || ""
-                    }
-                    refreshTrigger={refreshTrigger}
-                  />
-                </div>
-                <Footer />
+            1 ? (
+            // isLoading && !collections.length ? (
+              <div className="flex flex-1 items-center justify-center">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
               </div>
-              <BackToTop />
-            </>
-          ) : (
-            <div className="flex flex-1">
-              <GetStarted />
-            </div>
-          )}
+            ) :
+              selectedCollectionId || collectionSlug ? (
+                <>
+                  <WebsiteSidebar
+                    selectedCollectionId={selectedCollectionId}
+                    currentFolderId={currentFolderId}
+                    onCollectionChange={handleCollectionChange}
+                    onFolderSelect={handleFolderSelect}
+                  />
+                  <div className="flex flex-1 flex-col space-y-8">
+                    <Header
+                      selectedCollectionId={selectedCollectionId}
+                      currentFolderId={currentFolderId}
+                      onBookmarkAdded={refreshData}
+                    />
+                    <div className="flex-1 overflow-y-auto">
+                      <BookmarkGrid
+                        key={`${selectedCollectionId}-${currentFolderId}`}
+                        collectionId={selectedCollectionId}
+                        currentFolderId={currentFolderId}
+                        collectionName={collectionName}
+                        collectionSlug={
+                          collections.find((c) => c.id === selectedCollectionId)
+                            ?.slug || ""
+                        }
+                        refreshTrigger={refreshTrigger}
+                      />
+                    </div>
+                    <Footer />
+                  </div>
+                  <BackToTop />
+                </>
+              ) : (
+                <div className="flex flex-1">
+                  <GetStarted />
+                </div>
+              )}
         </SidebarProvider>
       </div>
     </div>
@@ -156,7 +157,7 @@ function SearchParamsComponent() {
 
 export default function Page() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div style={{ margin: 'auto' }}>加载中，请稍后...</div>}>
       <SearchParamsComponent />
     </Suspense>
   );
