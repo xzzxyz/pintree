@@ -3,8 +3,9 @@ import Link from "next/link";
 
 export function Footer() {
   const { settings } = useSettings('basic');
-console.log('🧞‍♀️:\n', settings);
+  console.log('🧞‍♀️:\n', settings);
 
+  // settings.linkedinUrl = ""
   const socialLinks = [
     {
       key: 'githubUrl',
@@ -15,7 +16,47 @@ console.log('🧞‍♀️:\n', settings);
       key: 'twitterUrl',
       icon: 'ri-twitter-x-fill',
       label: 'Twitter'
-    }
+    },
+    {
+      key: 'discordUrl',
+      icon: 'ri-discord-fill',
+      label: 'Discord'
+    },
+    {
+      key: 'youtubeUrl',
+      icon: 'ri-youtube-fill',
+      label: 'YouTube'
+    },
+    {
+      key: 'weixinUrl',
+      icon: 'ri-wechat-fill',
+      label: 'WeChat'
+    },
+    {
+      key: 'weiboUrl',
+      icon: 'ri-weibo-fill',
+      label: 'Weibo'
+    },
+    {
+      key: 'bilibiliUrl',
+      icon: 'ri-bilibili-fill',
+      label: 'Bilibili'
+    },
+    {
+      key: 'zhihuUrl',
+      icon: 'ri-zhihu-fill',
+      label: 'Zhihu'
+    },
+    // {
+    //   key: 'linkedinUrl',
+    //   icon: 'ri-linkedin-fill',
+    //   label: 'LinkedIn'
+    // },
+    {
+      key: 'contactEmail',
+      icon: 'ri-mail-fill',
+      label: 'Contact Email'
+    },
   ];
 
   return (
@@ -46,7 +87,7 @@ console.log('🧞‍♀️:\n', settings);
 
           {/* 右侧社交媒体链接 */}
           <div className="flex items-center space-x-4">
-            {socialLinks.map(({ key, icon, label }) => 
+            {socialLinks.map(({ key, icon, label }) =>
               (key === 'contactEmail' ? settings[key] : settings[key]) && (
                 <Link
                   key={key}
