@@ -111,21 +111,21 @@ function SearchParamsComponent() {
             // <div className="flex flex-1 items-center justify-center">
             //   <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
             // </div>
-            <div id="loading-box">
-            <div className="loading-left-bg"></div>
-            <div className="loading-right-bg"></div>
-            <div className="spinner-box">
-              <div className="loader">
-                <div className="inner one"></div>
-                <div className="inner two"></div>
-                <div className="inner three"></div>
-              </div>
-              <div className="loading-word">
-                <p className="loading-title" id="loading-title"><%- title %></p>
-                <span id="loading-text">加载中</span>
+            <div className="loading-box">
+              <div className="loading-left-bg"></div>
+              <div className="loading-right-bg"></div>
+              <div className="spinner-box">
+                <div className="loader">
+                  <div className="inner one"></div>
+                  <div className="inner two"></div>
+                  <div className="inner three"></div>
+                </div>
+                <div className="loading-word">
+                  <p className="loading-title" id="loading-title"><%- title %></p>
+                  <span className="loading-text">加载中</span>
+                </div>
               </div>
             </div>
-          </div>
           ) : 
           selectedCollectionId || collectionSlug ? (
             <>
