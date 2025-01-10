@@ -119,7 +119,7 @@ function SearchParamsComponent() {
                       <div className="inner three"></div>
                     </div>
                     <div className="loading-word">
-                      <span id="loading-text">加载中</span>
+                      <div id="loading-text">加载中</div>
                     </div>
                   </div>
                 </div>
@@ -179,7 +179,7 @@ export default function Page() {
               <div className="inner three"></div>
             </div>
             <div className="loading-word">
-              <span id="loading-text">加载中</span>
+              <div id="loading-text">加载中</div>
             </div>
           </div>
         </div>

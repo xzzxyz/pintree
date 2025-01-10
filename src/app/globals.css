@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import 'remixicon/fonts/remixicon.css';
+@import "remixicon/fonts/remixicon.css";
 
 @layer base {
   :root {
@@ -110,11 +110,7 @@
   } */
 }
 
-
-
-
-
-#loading-box>.spinner-box {
+#loading-box > .spinner-box {
   position: fixed;
   z-index: 999999;
   display: flex;
@@ -134,8 +130,12 @@
   font-size: 1.25rem;
   white-space: nowrap;
   font-family: monospace;
-  overflow: hidden;
-  animation: chang 1s linear infinite;
+
+  &::after {
+    content: "...";
+    overflow: hidden;
+    animation: chang 1s linear infinite;
+  }
 }
 
 .loader {
@@ -161,21 +161,21 @@
   left: 0%;
   top: 0%;
   animation: rotate-one 1s linear infinite;
-  border-bottom: 3px solid #EFEFFA;
+  border-bottom: 3px solid #efeffa;
 }
 
 .inner.two {
   right: 0%;
   top: 0%;
   animation: rotate-two 1s linear infinite;
-  border-right: 3px solid #EFEFFA;
+  border-right: 3px solid #efeffa;
 }
 
 .inner.three {
   right: 0%;
   bottom: 0%;
   animation: rotate-three 1s linear infinite;
-  border-top: 3px solid #EFEFFA;
+  border-top: 3px solid #efeffa;
 }
 
 @keyframes rotate-one {
