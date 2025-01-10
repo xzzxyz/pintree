@@ -107,25 +107,23 @@ function SearchParamsComponent() {
       <div className="flex flex-1">
         <SidebarProvider>
           {
-            1 ? (
-            // isLoading && !collections.length ? (
-              <div className="flex flex-1 items-center justify-center">
+              isLoading && !collections.length ? (
+              <div className="flex flex-1 items-center justify-center bg-background">
                 {/* <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div> */}
                 <div className="h-12 w-12">
-                <div id="loading-box">
-
-    <div className="spinner-box">
-      <div className="loader">
-        <div className="inner one"></div>
-        <div className="inner two"></div>
-        <div className="inner three"></div>
-      </div>
-      {/* <div className="loading-word">
-        <p className="loading-title" id="loading-title"><%- title %></p>
-        <span id="loading-text">加载中</span>
-      </div> */}
-    </div>
-  </div>
+                  <div id="loading-box">
+                    <div className="spinner-box">
+                      <div className="loader">
+                        <div className="inner one"></div>
+                        <div className="inner two"></div>
+                        <div className="inner three"></div>
+                      </div>
+                      <div className="loading-word">
+                        {/* <p className="loading-title" id="loading-title"><%- title %></p> */}
+                        <span id="loading-text">加载中</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             ) :
