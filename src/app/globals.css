@@ -130,11 +130,13 @@
   font-size: 1.25rem;
   white-space: nowrap;
   font-family: monospace;
+  position: relative;
 
   &::after {
     content: "...";
+    position: absolute;
     overflow: hidden;
-    animation: chang 1s linear infinite;
+    animation: chang 1s step-end infinite;
   }
 }
 
@@ -210,14 +212,14 @@
 
 @keyframes chang {
   0% {
-    width: 4rem;
+    width: 0rem;
   }
 
   50% {
-    width: 5rem;
+    width: 1rem;
   }
 
   100% {
-    width: 6rem;
+    width: 2rem;
   }
 }
