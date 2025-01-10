@@ -112,10 +112,10 @@ function SearchParamsComponent() {
               <div className="flex flex-1 items-center justify-center">
                 {/* <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div> */}
                 <div className="h-12 w-12">
-                <div id="loading-box">123
-    {/* <div class="loading-left-bg"></div>
+                <div id="loading-box">
+    <div class="loading-left-bg"></div>
     <div class="loading-right-bg"></div>
-    <div class="spinner-box">
+    {/* <div class="spinner-box">
       <div class="loader">
         <div class="inner one"></div>
         <div class="inner two"></div>
