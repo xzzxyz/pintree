@@ -113,8 +113,8 @@ function SearchParamsComponent() {
                 {/* <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div> */}
                 <div className="h-12 w-12">
                 <div id="loading-box">
-    <div class="loading-left-bg"></div>
-    <div class="loading-right-bg"></div>
+    <div className="loading-left-bg"></div>
+    <div className="loading-right-bg"></div>
     {/* <div class="spinner-box">
       <div class="loader">
         <div class="inner one"></div>
