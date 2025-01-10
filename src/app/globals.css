@@ -211,19 +211,15 @@
 }
 
 @keyframes chang {
-  0% {
-    width: 0rem;
+  33.3% {
+    width: 10px;
   }
 
-  50% {
-    width: .9rem;
+  66.6% {
+    width: 20px;
   }
 
-  75% {
-    width: 1.8rem;
-  }
-
-  100% {
-    width: .9rem;
+  99.9% {
+    width: 30px;
   }
 }
