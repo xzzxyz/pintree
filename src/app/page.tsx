@@ -107,8 +107,7 @@ function SearchParamsComponent() {
       <div className="flex flex-1">
         <SidebarProvider>
           {
-            1 ? (
-              // isLoading && !collections.length ? (
+            isLoading && !collections.length ? (
               <div className="flex flex-1 items-center justify-center bg-[#515151e0]">
                 {/* <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div> */}
                 <div id="loading-box">
