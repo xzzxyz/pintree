@@ -171,8 +171,8 @@ function SearchParamsComponent() {
 
 export default function Page() {
   return (
-    // <Suspense fallback={<div className="flex flex-1 items-center justify-center">加载中，请稍后...</div>}>
-    <Suspense>
+    <Suspense fallback={<div className="flex flex-1 h-screen items-center justify-center">加载中，请稍后...</div>}>
+    {/* <Suspense> */}
       <SearchParamsComponent />
     </Suspense>
   );
