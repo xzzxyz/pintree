@@ -107,7 +107,8 @@ function SearchParamsComponent() {
       <div className="flex flex-1">
         <SidebarProvider>
           {
-            isLoading && !collections.length ? (
+            1 ? (
+              // isLoading && !collections.length ? (
               <div className="flex flex-1 items-center justify-center bg-[#515151e0]">
                 {/* <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div> */}
                 <div id="loading-box">
@@ -168,7 +169,6 @@ function SearchParamsComponent() {
 
 export default function Page() {
   return (
-    // <Suspense fallback={<div className="flex flex-1 h-screen items-center justify-center">加载中，请稍后...</div>}>
     <Suspense fallback={
       <div className="flex flex-1 h-screen items-center justify-center bg-[#515151e0]">
         <div id="loading-box">
