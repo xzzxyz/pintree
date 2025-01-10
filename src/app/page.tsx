@@ -115,17 +115,17 @@ function SearchParamsComponent() {
                 <div id="loading-box">
     <div className="loading-left-bg"></div>
     <div className="loading-right-bg"></div>
-    {/* <div class="spinner-box">
-      <div class="loader">
-        <div class="inner one"></div>
-        <div class="inner two"></div>
-        <div class="inner three"></div>
+    <div className="spinner-box">
+      <div className="loader">
+        <div className="inner one"></div>
+        <div className="inner two"></div>
+        <div className="inner three"></div>
       </div>
-      <div class="loading-word">
-        <p class="loading-title" id="loading-title"><%- title %></p>
+      <div className="loading-word">
+        <p className="loading-title" id="loading-title"><%- title %></p>
         <span id="loading-text">加载中</span>
       </div>
-    </div> */}
+    </div>
   </div>
                 </div>
               </div>
