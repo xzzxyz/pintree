@@ -169,7 +169,22 @@ function SearchParamsComponent() {
 export default function Page() {
   return (
     // <Suspense fallback={<div className="flex flex-1 h-screen items-center justify-center">加载中，请稍后...</div>}>
-    <Suspense>
+    <Suspense fallback={
+      <div className="flex flex-1 h-screen items-center justify-center bg-[#515151e0]">
+        <div id="loading-box">
+          <div className="spinner-box">
+            <div className="loader">
+              <div className="inner one"></div>
+              <div className="inner two"></div>
+              <div className="inner three"></div>
+            </div>
+            <div className="loading-word">
+              <span id="loading-text">加载中</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    }>
       <SearchParamsComponent />
     </Suspense>
   );
