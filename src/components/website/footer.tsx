@@ -3,6 +3,7 @@ import Link from "next/link";
 
 export function Footer() {
   const { settings } = useSettings('basic');
+console.log('🧞‍♀️:\n', settings);
 
   const socialLinks = [
     {
