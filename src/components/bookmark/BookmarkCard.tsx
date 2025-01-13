@@ -59,7 +59,7 @@ export function BookmarkCard({
           onError={() => setImageError(true)}
           priority={isFeatured}
         /> */}
-        {(imageError || !icon) ? (
+        {(imageError) ? (
           <Avatar
             name={title}
             size="100%"
