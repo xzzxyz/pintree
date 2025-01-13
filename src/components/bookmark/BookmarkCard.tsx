@@ -59,15 +59,23 @@ export function BookmarkCard({
           onError={() => setImageError(true)}
           priority={isFeatured}
         /> */}
-        <Avatar
-          src={icon}
-          name={title}
-          size="100%"
-          round={true}
-          className="flex items-center"
-          color={getRandomColor()}
-          maxInitials={1}
-        />
+        {(imageError || !icon) ? (
+          <Avatar
+            name={title}
+            size="100%"
+            round={true}
+            className="flex items-center"
+            color={getRandomColor()}
+            maxInitials={1}
+          />
+        ) : (
+          <Avatar
+            src={icon}
+            size="100%"
+            round={true}
+            className="flex items-center"
+          />
+        )}
       </div>
 
       <div className="flex flex-col overflow-hidden">
