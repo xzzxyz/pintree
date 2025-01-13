@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { Folder } from 'lucide-react'
 import Avatar from 'react-avatar';
+const getRandomColor = () => '#' + Math.random().toString(16).slice(2, 8)
 
 
 interface BookmarkCardProps {
@@ -62,10 +63,9 @@ export function BookmarkCard({
           name={title}
           size="100%"
           round={true}
-          className="absolute inset-0"
-          color="#eaebf3"
-          textSizeRatio={1.5}
-          maxInitials={2}
+          className="flex items-center"
+          color={getRandomColor()}
+          maxInitials={1}
         />
       </div>
 
