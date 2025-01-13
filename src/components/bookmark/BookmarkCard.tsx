@@ -59,7 +59,7 @@ export function BookmarkCard({
           onError={() => setImageError(true)}
           priority={isFeatured}
         /> */}
-        {(imageError) ? (
+        {imageError ? (
           <Avatar
             name={title}
             size="100%"
@@ -69,11 +69,13 @@ export function BookmarkCard({
             maxInitials={1}
           />
         ) : (
-          <Avatar
-            src={icon}
-            size="100%"
-            round={true}
-            className="flex items-center"
+          <Image
+            src={icon || defaultIcon}
+            alt={title}
+            fill
+            className="rounded-full object-cover"
+            onError={() => setImageError(true)}
+            priority={isFeatured}
           />
         )}
       </div>
