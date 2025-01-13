@@ -32,7 +32,7 @@ export function ImportCollectionDialog({
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
-    name: "",
+    name: "xzzxyz",
     description: "",
     file: null as File | null,
   });
