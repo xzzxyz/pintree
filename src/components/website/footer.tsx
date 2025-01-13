@@ -101,7 +101,7 @@ export function Footer() {
           {/* 中间 Powered by 信息 */}
 
           <div className="text-sm text-muted-foreground text-center md:text-left" style={{ margin: 0 }}>
-            <p>{siteDateStatistics(new Date('2025/1/1'))}</p>
+            <p className="text-center">{siteDateStatistics(new Date('2025/1/1'))}</p>
             <span>{settings.copyrightText}</span>
           </div>
 
