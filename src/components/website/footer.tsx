@@ -1,5 +1,24 @@
 import { useSettings } from "@/hooks/use-settings";
 import Link from "next/link";
+// 建站日期统计
+const siteDateStatistics = (startDate) => {
+  const currentDate = new Date();
+  const differenceInTime = currentDate.getTime() - startDate.getTime();
+  const differenceInDays = differenceInTime / (1000 * 3600 * 24);
+  const differenceInMonths = differenceInDays / 30;
+  const differenceInYears = differenceInMonths / 12;
+  let str = "本站已经苟活了 ";
+  if (differenceInYears >= 1) {
+    str += Math.floor(differenceInYears) + " 年 ";
+  }
+  if (differenceInMonths % 12 >= 1) {
+    str += Math.floor(differenceInMonths % 12) + " 月 ";
+  }
+  if (differenceInDays % 30 >= 1) {
+    str += Math.floor(differenceInDays % 30) + " 天";
+  }
+  return str;
+};
 
 export function Footer() {
   const { settings } = useSettings('basic');
@@ -81,7 +100,8 @@ export function Footer() {
 
           {/* 中间 Powered by 信息 */}
 
-          <div className="text-sm text-muted-foreground text-center md:text-left">
+          <div className="text-sm text-muted-foreground text-center md:text-left" style={{ margin: 0 }}>
+            <p>{siteDateStatistics(new Date('2025/1/1'))}</p>
             <span>{settings.copyrightText}</span>
           </div>
 
