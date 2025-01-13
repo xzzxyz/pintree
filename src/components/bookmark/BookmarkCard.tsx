@@ -60,6 +60,7 @@ export function BookmarkCard({
           priority={isFeatured}
         /> */}
         <Avatar
+          src={icon}
           name={title}
           size="100%"
           round={true}

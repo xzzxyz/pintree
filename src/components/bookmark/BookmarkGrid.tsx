@@ -352,7 +352,7 @@ export function BookmarkGrid({
           {/* 搜索加载状态显示 */}
         </div>
       ) : (
-        <div className="space-y-12">
+        <div className="space-y-12 pb-8">
           {/* 搜索结果显示 */}
           {searchResults.length > 0 ? (
             <div className="space-y-4">
