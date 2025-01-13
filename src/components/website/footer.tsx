@@ -1,7 +1,7 @@
 import { useSettings } from "@/hooks/use-settings";
 import Link from "next/link";
 // 建站日期统计
-const siteDateStatistics = (startDate) => {
+const siteDateStatistics = (startDate: Date) => {
   const currentDate = new Date();
   const differenceInTime = currentDate.getTime() - startDate.getTime();
   const differenceInDays = differenceInTime / (1000 * 3600 * 24);
