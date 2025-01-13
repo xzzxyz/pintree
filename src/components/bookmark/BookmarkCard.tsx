@@ -3,6 +3,8 @@
 import Image from 'next/image'
 import { useState } from 'react'
 import { Folder } from 'lucide-react'
+import Avatar from 'react-avatar';
+
 
 interface BookmarkCardProps {
   title: string
@@ -30,13 +32,13 @@ export function BookmarkCard({
 }: BookmarkCardProps) {
   const [imageError, setImageError] = useState(false)
   const defaultIcon = '/assets/default-icon.svg'
-  
+
   // 清理 URL 显示，移除 http(s) 和尾部斜杠
   const cleanUrl = url.replace(/^https?:\/\//, '').replace(/\/$/, '')
 
   return (
-    <div 
-      style={{transition:'0.15s'}}
+    <div
+      style={{ transition: '0.15s' }}
       onClick={() => window.open(url, '_blank')}
       className={`
         cursor-pointer flex items-center transition-shadow p-4 
@@ -48,13 +50,22 @@ export function BookmarkCard({
       `}
     >
       <div className="relative w-8 h-8 mr-4 flex-shrink-0">
-        <Image
+        {/* <Image
           src={imageError ? defaultIcon : (icon || defaultIcon)}
           alt={title}
           fill
           className="rounded-full object-cover"
           onError={() => setImageError(true)}
           priority={isFeatured}
+        /> */}
+        <Avatar
+          name={title}
+          size="100%"
+          round={true}
+          className="absolute inset-0"
+          color="#eaebf3"
+          textSizeRatio={1.5}
+          maxInitials={2}
         />
       </div>
 
@@ -62,7 +73,7 @@ export function BookmarkCard({
         <h2 className="text-sm font-medium mb-1 truncate dark:text-gray-400">
           {title}
         </h2>
-        
+
         {description && (
           <p className="text-xs text-gray-500 dark:text-gray-600 mb-1 line-clamp-2">
             {description}
