@@ -4,7 +4,17 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { Folder } from 'lucide-react'
 import Avatar from 'react-avatar';
-const getRandomColor = () => '#' + Math.random().toString(16).slice(2, 8)
+// const getRandomColor = () => '#' + Math.random().toString(16).slice(2, 8)
+function getRandomColor() {
+  // 随机色相（0 到 360）
+  const h = Math.floor(Math.random() * 360);
+
+  // 限制饱和度和亮度（避免过于鲜艳或过暗）
+  const s = Math.floor(Math.random() * 30) + 50; // 饱和度 50% 到 80%
+  const l = Math.floor(Math.random() * 30) + 50; // 亮度 50% 到 80%
+
+  return `hsl(${h}, ${s}%, ${l}%)`;
+}
 
 
 interface BookmarkCardProps {
