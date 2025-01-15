@@ -25,8 +25,8 @@ export default function CollectionsPage() {
   };
 
   const handleCollectionsChange = (collections: any[]) => {
-    return;
-    setHasCollections(collections.length > 0);
+    // setHasCollections(collections.length > 0);
+    setHasCollections(false);
   };
 
   return (
